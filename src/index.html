@@ -10,7 +10,7 @@
 
 
     <style>
-         #scocca {
+         #configure {
             position: absolute;
             top: 0;
             left: 0;
@@ -30,6 +30,14 @@
          #sedili {
             position: absolute;
             top: 280px;
+            left: 0;
+            background: black;
+            color: white;
+            padding: 20px;
+         }
+         #cerchi {
+            position: absolute;
+            top: 420px;
             left: 0;
             background: black;
             color: white;
@@ -67,31 +75,41 @@
     <img id="logo" src="/static/logo.png">
     <canvas class="webgl"></canvas>
     
-    <div id="scocca">
-        <h2> Colore scocca</h2>
+    <div id="configure">
+        <h2> Colore configure</h2>
     <form class="conf">
-        <input class="scocca" type="radio" name="color" value="0xb5FF4b"> verde </input>
-        <input class="scocca" type="radio" name="color" value="0xff0000"> rosso </input>
-        <input class="scocca" type="radio" name="color" value="0x000000"> nero </input>
-        <input class="scocca" type="radio" name="color" value="0xFFFF00"> giallo </input>
+        <input class="configure" type="radio" name="color" value="0xb5FF4b" id="0"> verde </input>
+        <input class="configure" type="radio" name="color" value="0xff0000" id="0"> rosso </input>
+        <input class="configure" type="radio" name="color" value="0xee1111" id="0"> rosso corsa </input>
+        <input class="configure" type="radio" name="color" value="0x000000" id="0"> nero </input>
+        <input class="configure" type="radio" name="color" value="0xFFFF00" id="0"> giallo </input>
      </form>
     </div>
     <div id="dettagli">
         <h2> Colore dettagli</h2>
     <form class="conf">
-        <input class="dettagli" type="radio" name="color" value="0xb5FF4b"> verde </input>
-        <input class="dettagli" type="radio" name="color" value="0x222222"> grigio </input>
-        <input class="dettagli" type="radio" name="color" value="0x000000"> nero </input>
-        <input class="dettagli" type="radio" name="color" value="0xFFFF00"> giallo </input>
+      
+        <input   class="configure" type="radio" name="color" value="0x222222" id="1"> grigio </input>
+        <input   class="configure"type="radio" name="color" value="0x111111" id="1"> carbon </input>
+        <input   class="configure"type="radio" name="color" value="0x000000" id="1"> nero </input>
+        <input  class="configure" type="radio" name="color" value="0xFFFF00" id="1"> giallo </input>
      </form>
     </div>
     <div id="sedili">
         <h2> Colore sedili</h2>
     <form class="conf">
-        <input class="sedili" type="radio" name="color" value="0xb5FF4b"> verde </input>
-        <input class="sedili" type="radio" name="color" value="0xff0000"> rosso </input>
-        <input class="sedili" type="radio" name="color" value="0x000000"> nero </input>
-        <input class="sedili" type="radio" name="color" value="0xFFFF00"> giallo </input>
+        <input  class="configure" type="radio" name="color" value="0xb5FF4b" id="2"> verde </input>
+        <input  class="configure" type="radio" name="color" value="0xff0000" id="2"> rosso </input>
+        <input   class="configure" type="radio" name="color" value="0x000000" id="2"> nero </input>
+        <input   class="configure" type="radio" name="color" value="0xFFFF00"id="2"> giallo </input>
+     </form>
+    </div>
+    <div id="cerchi">
+        <h2> Colore cerchioni</h2>
+    <form class="conf">
+  
+        <input   class="configure" type="radio" name="color" value="0x000000" id="3"> nero </input>
+        <input   class="configure" type="radio" name="color" value="0xFFFFFF"id="3"> bianco </input>
      </form>
     </div>
 </body>

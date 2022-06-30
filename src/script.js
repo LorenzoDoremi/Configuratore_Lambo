@@ -3,7 +3,7 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import * as dat from "dat.gui";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-import { loadCar, scocca, interni, sedili, dettagli } from "./loadCar";
+import { loadCar, parti } from "./loadCar";
 import { TextureLoader } from "three";
 import { lightCreator } from "./lightCreator";
 
@@ -44,12 +44,13 @@ scene.fog = new THREE.FogExp2(new THREE.Color(1, 1, 1), 0.0);
 lightCreator(5, 3, 0, 0.8, scene);
 lightCreator(0, 5, 0, 0.8, scene);
 lightCreator(-5, 2, -4, 0.8, scene);
+lightCreator(0, 0.5, 4, 1, scene);
 
 scene.add(new THREE.AmbientLight(0xffffff, 1));
 
 //Load background texture
 
-var domeTexture = loader.load("dome2.hdr");
+var domeTexture = loader.load("dome.png");
 
 
 var dome = new THREE.Mesh(
@@ -135,26 +136,10 @@ const tick = () => {
 
 tick();
 
-$(".scocca").on("touchstart mousedown", function (e) {
+$(".configure").on("touchstart mousedown", function (e) {
   var attribute = $(this).attr("value");
   console.log(attribute);
-  scocca.color = new THREE.Color(parseInt(attribute));
-
+  parti[parseInt($(this).attr("id"))].color = new THREE.Color(parseInt(attribute));
   e.preventDefault(); //prevents further events from being dispatched
 });
 
-$(".dettagli").on("touchstart mousedown", function (e) {
-  var attribute = $(this).attr("value");
-  console.log(attribute);
-  dettagli.color = new THREE.Color(parseInt(attribute));
-
-  e.preventDefault(); //prevents further events from being dispatched
-});
-
-$(".sedili").on("touchstart mousedown", function (e) {
-    var attribute = $(this).attr("value");
-    console.log(attribute);
-    sedili.color = new THREE.Color(parseInt(attribute));
-  
-    e.preventDefault(); //prevents further events from being dispatched
-  });
