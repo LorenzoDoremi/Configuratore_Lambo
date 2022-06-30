@@ -1,17 +1,8 @@
-# Three.js Starter
-Courtesy of Bruno Simon of https://threejs-journey.xyz/
 
-## Setup
-Download [Node.js](https://nodejs.org/en/download/).
-Run this followed commands:
+A simple car configurator project done in ThreeJS. Free Huracan model downloaded from sketchfab. 
 
-``` bash
-# Install dependencies (only the first time)
-npm install
 
-# Run the local server at localhost:8080
-npm run dev
+<p align="center">
+  <img src="https://github.com/LorenzoDoremi/Configuratore_Lambo/blob/main/demo_images/screenshot.png" width="800" title="lambo">
 
-# Build for production in the dist/ directory
-npm run build
-```
+</p>
