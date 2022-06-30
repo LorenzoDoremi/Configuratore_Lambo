@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>ThreeJS Starter</title>
+
+
+    <style>
+         #scocca {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: black;
+            color: white;
+            padding: 20px;
+
+         }
+         #dettagli {
+            position: absolute;
+            top: 140px;
+            left: 0;
+            background: black;
+            color: white;
+            padding: 20px;
+         }
+         #sedili {
+            position: absolute;
+            top: 280px;
+            left: 0;
+            background: black;
+            color: white;
+            padding: 20px;
+         }
+        .conf {
+          
+            
+          
+           
+           
+
+        }
+        .conf input {
+            margin-left: 40px;
+        }
+        .conf input:nth-child(1) {
+            margin-left: 0
+        }
+
+
+
+        #logo {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translate(-50%);
+            z-index: 10;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <img id="logo" src="/static/logo.png">
+    <canvas class="webgl"></canvas>
+    
+    <div id="scocca">
+        <h2> Colore scocca</h2>
+    <form class="conf">
+        <input class="scocca" type="radio" name="color" value="0xb5FF4b"> verde </input>
+        <input class="scocca" type="radio" name="color" value="0xff0000"> rosso </input>
+        <input class="scocca" type="radio" name="color" value="0x000000"> nero </input>
+        <input class="scocca" type="radio" name="color" value="0xFFFF00"> giallo </input>
+     </form>
+    </div>
+    <div id="dettagli">
+        <h2> Colore dettagli</h2>
+    <form class="conf">
+        <input class="dettagli" type="radio" name="color" value="0xb5FF4b"> verde </input>
+        <input class="dettagli" type="radio" name="color" value="0x222222"> grigio </input>
+        <input class="dettagli" type="radio" name="color" value="0x000000"> nero </input>
+        <input class="dettagli" type="radio" name="color" value="0xFFFF00"> giallo </input>
+     </form>
+    </div>
+    <div id="sedili">
+        <h2> Colore sedili</h2>
+    <form class="conf">
+        <input class="sedili" type="radio" name="color" value="0xb5FF4b"> verde </input>
+        <input class="sedili" type="radio" name="color" value="0xff0000"> rosso </input>
+        <input class="sedili" type="radio" name="color" value="0x000000"> nero </input>
+        <input class="sedili" type="radio" name="color" value="0xFFFF00"> giallo </input>
+     </form>
+    </div>
+</body>
+</html>
